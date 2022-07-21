@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmpManagement
 {
-    public class EmpWage
+    public class EmpMonthlyWage
     {
         int IsPartTime = 1;
         int IsFullTime = 2;

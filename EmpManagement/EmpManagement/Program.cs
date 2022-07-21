@@ -1,6 +1,6 @@
 ﻿using EmpManagement;
 
-EmpWage emp = new EmpWage();
+EmpMonthlyWage emp = new EmpMonthlyWage();
 emp.Attendance();
 emp.DailyWage();
 emp.TotalEmpWage();
