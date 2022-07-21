@@ -8,29 +8,26 @@ namespace EmpManagement
 {
     public class EmpWage
     {
-
-        const int IS_FULL_TIME = 1, FULL_TIME_HOURS = 8, RATE_PER_HOUR = 20, NUM_OF_WORKING_DAYS = 100;
-        int empHrs = 0, dailyEmpWage;
+        int IsPartTime = 1;
+        int IsFullTime = 2;
+        int EmpRatePerHour = 20;
+        int empHrs = 0;
+        int EmpWage = 0;
         Random random = new Random();
-        public void Attendance()
+        int empCheck = Random.Next(0, 2);
+        if (empCheck == IsPartTime)
         {
-            int empCheck = random.Next(0, 2);
-            if (empCheck == IS_FULL_TIME)
-            {
-                Console.WriteLine("Employee is Present");
-                empHrs = FULL_TIME_HOURS;
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
-            }
+            empHrs = 4;
         }
-        public void DailyWage()
+        else if (empCheck == IsFullTime)
         {
-            dailyEmpWage = empHrs * RATE_PER_HOUR;
-            totalEmpWage += EmpWage;
-            Console.WriteLine(DailyWage);
+            empHrs = 8;
         }
-        Console.WriteLine("Total Emp Wage : " + totalEmpWage)
+        else
+        {
+            empHrs = 0;      
+        }
+        empWage = empHrs * EmpRatePerHour;
+        Console.WriteLine("EmpWage : " + empWage);
     }
 }
