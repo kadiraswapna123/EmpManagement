@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace EmpManagement
 {
-    public class EmpWage
+    public class TotalEmpWage
     {
-
         const int IS_FULL_TIME = 1, FULL_TIME_HOURS = 8, RATE_PER_HOUR = 20, NUM_OF_WORKING_DAYS = 100;
         int empHrs = 0, dailyEmpWage;
         Random random = new Random();
@@ -25,7 +24,7 @@ namespace EmpManagement
                 Console.WriteLine("Employee is Absent");
             }
         }
-        public void DailyWage()
+        public void TotalEmpWage()
         {
             dailyEmpWage = empHrs * RATE_PER_HOUR;
             totalEmpWage += EmpWage;
